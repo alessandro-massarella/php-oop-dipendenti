@@ -10,6 +10,11 @@ Attenzione ad utilizzare un trait laddove necessario....
 require_once 'persona.php';
 require_once 'impiegato.php';
 
+$persona1 = new Persona('Alessandro', 'Massarella', 'codfisc');
+echo $persona1->toString();
+
+
+
 
 
 
