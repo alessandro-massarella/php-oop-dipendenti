@@ -1,15 +1,18 @@
 <?php
 
+require 'progetto.php';
+
+
 class Impiegato extends Persona {
     protected $codice_impiegato;
     protected $compenso;
     
     public function calcola_compenso(){
 
-    };
+    }
     public function toString() {
 
-    };
+    }
 }
 
 
@@ -19,7 +22,7 @@ class ImpiegatoSalariato extends Impiegato {
 
     public function calcola_compenso(){
 
-    };
+    }
 }
 
 
@@ -29,16 +32,15 @@ class ImpiegatoAOre extends Impiegato {
 
     public function calcola_compenso(){
 
-    };
-
-
-    require_once(progetto.php);
-    class ImpiegatoSuCommissione {
-        public function calcola_compenso(){
-
-        };
-    
     }
+    
+}
+
+class ImpiegatoSuCommissione {
+    public function calcola_compenso(){
+
+    }
+
 }
 
 ?>
