@@ -12,7 +12,9 @@ class Persona {
     }
 
     public function toString() {
-        return 'Nome Persona:' . ' ' . $this->nome .'; '. 'Cognome: ' . $this->cognome . '; '. 'Codice fiscale: '. $this->codice_fiscale;
+        $stringify = 'Nome Persona:' . ' ' . $this->nome .'; '. 'Cognome: ' . $this->cognome . '; '. 'Codice fiscale: '. $this->codice_fiscale;
+        
+        return $stringify;
     }
 }
 

@@ -14,19 +14,24 @@ $persona1 = new Persona('Alessandro', 'Massarella', 'codfisc');
 // echo $persona1->toString();
 
 $impiegato1 = new Impiegato('Giulio', 'Rossi', 'codfiscrossi', 'cod:1', '2000');
-echo $impiegato1->calcola_compenso();
-echo $impiegato1->toString();
+// echo $impiegato1->calcola_compenso();
+// echo $impiegato1->toString();
 
 
 $impiegato_salariato1 = new ImpiegatoSalariato('Stefano', 'Frosi', 'codfiscfrosi', 'imp_sal1', '30', '10');
-echo $impiegato_salariato1->calcola_compenso();
+// echo $impiegato_salariato1->calcola_compenso();
+// echo $impiegato_salariato1->toString();
 
 $impiegato_a_ore1 = new ImpiegatoAOre('Lillo', 'Petroli', 'codfiscpetr', 'imp_ore_1', '40', '10');
-echo $impiegato_a_ore1->calcola_compenso();
+
+// echo $impiegato_a_ore1->calcola_compenso();
+// echo $impiegato_a_ore1->toString();
+
 
 
 
 $impiegato_commissione = new ImpiegatoSuCommissione('Bruno', 'Fassbinder', 'codfiscfassbinder', 'imp_comm_1', '2300');
+
 echo $impiegato_commissione->calcola_compenso();
 
 
