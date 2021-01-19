@@ -30,9 +30,10 @@ $impiegato_a_ore1 = new ImpiegatoAOre('Lillo', 'Petroli', 'codfiscpetr', 'imp_or
 
 
 
-$impiegato_commissione = new ImpiegatoSuCommissione('Bruno', 'Fassbinder', 'codfiscfassbinder', 'imp_comm_1', '2300');
+$impiegato_commissione = new ImpiegatoSuCommissione('Roberto', 'Rossi', 'codfisc-rossi', 'cod_imp_com', '200', 'progetto: uno', '2300');
 
 echo $impiegato_commissione->calcola_compenso();
+echo $impiegato_commissione->toString();
 
 
 

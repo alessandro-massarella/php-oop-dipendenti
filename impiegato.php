@@ -75,12 +75,15 @@ class ImpiegatoSuCommissione extends Impiegato {
     
     use Progetto;
 
-    public function __construct($nome, $cognome, $codice_fiscale, $codice_impiegato, $compenso) {
+    public function __construct($nome, $cognome, $codice_fiscale, $codice_impiegato, $compenso, $nome_progetto, $commissione) {
         parent:: __construct($nome, $cognome, $codice_fiscale, $codice_impiegato, $compenso);
+
+        $this->nome_progetto = $nome_progetto;
+        $this->commissione = $commissione;
 
     }
     public function calcola_compenso(){
-        $this->compenso = $this->commissione; /* è il compenso dell'impiegato su commissione, collegato al progetto */
+        return $this->compenso = $this->commissione; /* è il compenso dell'impiegato su commissione, collegato al progetto */
 
 
     }
