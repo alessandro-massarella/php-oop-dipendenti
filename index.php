@@ -18,11 +18,11 @@ $impiegato1 = new Impiegato('Giulio', 'Rossi', 'codfiscrossi', 'cod:1', '2000');
 // echo $impiegato1->toString();
 
 
-$impiegato_salariato1 = new ImpiegatoSalariato('Stefano', 'Frosi', 'codfiscfrosi', 'imp_sal1', '30', '10');
+$impiegato_salariato1 = new ImpiegatoSalariato('Luca', 'Brazi', 'cod_fisc', 'imp_sal', '100', '30');
 // echo $impiegato_salariato1->calcola_compenso();
 // echo $impiegato_salariato1->toString();
 
-$impiegato_a_ore1 = new ImpiegatoAOre('Lillo', 'Petroli', 'codfiscpetr', 'imp_ore_1', '40', '10');
+$impiegato_a_ore1 = new ImpiegatoAOre('Lillo', 'Petroli', 'codfiscpetr', 'imp_ore_1', '40', '30');
 
 // echo $impiegato_a_ore1->calcola_compenso();
 // echo $impiegato_a_ore1->toString();
@@ -32,8 +32,8 @@ $impiegato_a_ore1 = new ImpiegatoAOre('Lillo', 'Petroli', 'codfiscpetr', 'imp_or
 
 $impiegato_commissione = new ImpiegatoSuCommissione('Roberto', 'Rossi', 'codfisc-rossi', 'cod_imp_com', '200', 'progetto: uno', '2300');
 
-echo $impiegato_commissione->calcola_compenso();
-echo $impiegato_commissione->toString();
+// echo $impiegato_commissione->calcola_compenso();
+// echo $impiegato_commissione->toString();
 
 
 
