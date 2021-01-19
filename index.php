@@ -24,7 +24,7 @@ $impiegato_salariato1 = new ImpiegatoSalariato('Luca', 'Brazi', 'cod_fisc', 'imp
 
 $impiegato_a_ore1 = new ImpiegatoAOre('Lillo', 'Petroli', 'codfiscpetr', 'imp_ore_1', '40', '30');
 
-// echo $impiegato_a_ore1->calcola_compenso();
+echo $impiegato_a_ore1->calcola_compenso();
 // echo $impiegato_a_ore1->toString();
 
 

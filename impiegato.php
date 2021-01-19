@@ -61,13 +61,17 @@ class ImpiegatoAOre extends Impiegato {
 
     public function __construct($nome, $cognome, $codice_fiscale, $codice_impiegato, $compenso, $ore_lavorate) {
         parent:: __construct($nome, $cognome, $codice_fiscale, $codice_impiegato, $compenso);
-
-        if(($ore_lavorate > 30) || ($ore_lavorate < 1)) {
-            throw new Exception('Devi inserire un numero di ore valido, compreso tra 1 e 30');
+// TRY AND CATCH
+        try {
+            if(($ore_lavorate > 30) && ($ore_lavorate < 1)) {
+                throw new Exception('Devi inserire un numero di ore valido, compreso tra 1 e 30');
+            }
+            $this->ore_lavorate = $ore_lavorate;
+            $this->compenso_orario = $compenso;
+        } catch (Exception $e) {
+            echo 'Eccezione: ' . $e->getMessage();
         }
 
-        $this->ore_lavorate = $ore_lavorate;
-        $this->compenso_orario = $compenso;
     }
 
     public function calcola_compenso(){ 
