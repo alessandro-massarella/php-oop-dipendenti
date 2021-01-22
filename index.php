@@ -22,8 +22,13 @@ $impiegato_salariato1 = new ImpiegatoSalariato('Luca', 'Brazi', 'cod_fisc', 'imp
 // echo $impiegato_salariato1->calcola_compenso();
 // echo $impiegato_salariato1->toString();
 
-$impiegato_a_ore1 = new ImpiegatoAOre('Lillo', 'Petroli', 'codfiscpetr', 'imp_ore_1', '40', '30');
 
+
+try {
+    $impiegato_a_ore1 = new ImpiegatoAOre('Lillo', 'Petroli', 'codfiscpetr', 'imp_ore_1', '40', '30');
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
 echo $impiegato_a_ore1->calcola_compenso();
 // echo $impiegato_a_ore1->toString();
 

@@ -7,7 +7,7 @@ class Impiegato extends Persona {
     protected $codice_impiegato;
     protected $compenso;
 
-    public function __construct($nome, $cognome, $codice_fiscale, $codice_impiegato, $compenso) {
+    public function __construct($nome, $cognome, $codice_fiscale, $codice_impiegato, $compenso) { 
         parent:: __construct($nome, $cognome, $codice_fiscale);  /* invoco gli attributi del padre (persona) */
 
         if (!is_numeric($compenso)) {
@@ -61,16 +61,12 @@ class ImpiegatoAOre extends Impiegato {
 
     public function __construct($nome, $cognome, $codice_fiscale, $codice_impiegato, $compenso, $ore_lavorate) {
         parent:: __construct($nome, $cognome, $codice_fiscale, $codice_impiegato, $compenso);
-// TRY AND CATCH
-        try {
-            if(($ore_lavorate > 30) && ($ore_lavorate < 1)) {
+            if(($ore_lavorate > 30) || ($ore_lavorate < 1)) {
                 throw new Exception('Devi inserire un numero di ore valido, compreso tra 1 e 30');
             }
             $this->ore_lavorate = $ore_lavorate;
             $this->compenso_orario = $compenso;
-        } catch (Exception $e) {
-            echo 'Eccezione: ' . $e->getMessage();
-        }
+
 
     }
 
